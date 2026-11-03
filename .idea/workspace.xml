@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="25cd49f5-783c-44af-ab4f-bb44d1dd33fb" name="Changes" comment="" />
+    <list default="true" id="25cd49f5-783c-44af-ab4f-bb44d1dd33fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/typing_speed_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -14,11 +32,73 @@
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0006588710365945" />
+      <entry key="MS500" value="1.3292639067435226" />
+      <entry key="S2" value="3.1564101331239467" />
+      <entry key="S5" value="5.822144617632772" />
+      <entry key="S10" value="9.104147083332778" />
+      <entry key="S30" value="17.34533210582259" />
+      <entry key="S60" value="27.645030894635294" />
+      <entry key="M2" value="41.65991419182226" />
+      <entry key="M5" value="61.49494994648353" />
+      <entry key="M10" value="84.1352312764872" />
+      <entry key="M15" value="104.75247186510711" />
+      <entry key="M30" value="149.31786421374406" />
+      <entry key="H1" value="191.54160035346328" />
+      <entry key="H2" value="221.53785124924562" />
+      <entry key="H4" value="239.55871250050637" />
+      <entry key="D1" value="256.41021779056393" />
+      <entry key="W1" value="259.48248703883394" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="4.593164681820136E-174" />
+      <entry key="S5" value="4.6221582101109253E-70" />
+      <entry key="S10" value="2.1499205125099247E-35" />
+      <entry key="S30" value="2.780614966031988E-12" />
+      <entry key="S60" value="1.6684801458004276E-6" />
+      <entry key="M2" value="0.0013464196053889711" />
+      <entry key="M5" value="0.11583410235458208" />
+      <entry key="M10" value="0.7297017647631701" />
+      <entry key="M15" value="1.431383140518066" />
+      <entry key="M30" value="2.8911288630797514" />
+      <entry key="H1" value="4.151527115947438" />
+      <entry key="H2" value="4.986991946224953" />
+      <entry key="H4" value="5.469038092932864" />
+      <entry key="D1" value="5.9078977391219905" />
+      <entry key="W1" value="5.98675125794685" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9271901720866706" />
+      <entry key="MS500" value="1.307839591918541" />
+      <entry key="S2" value="3.1373384431443085" />
+      <entry key="S5" value="5.806944911684505" />
+      <entry key="S10" value="9.092631041836453" />
+      <entry key="S30" value="17.338354902055077" />
+      <entry key="S60" value="27.639334530303383" />
+      <entry key="M2" value="41.65484078441038" />
+      <entry key="M5" value="61.59185390096261" />
+      <entry key="M10" value="84.82938304515315" />
+      <entry key="M15" value="106.142270995243" />
+      <entry key="M30" value="152.16937541774863" />
+      <entry key="H1" value="195.66479110799324" />
+      <entry key="H2" value="226.5077332768067" />
+      <entry key="H4" value="245.01832595463912" />
+      <entry key="D1" value="262.3164105873178" />
+      <entry key="W1" value="265.46899125805055" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3LYYIazYvhKAyrSoerN61OBakyH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,11 +106,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
   }
 }]]></component>
