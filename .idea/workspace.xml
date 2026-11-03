@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25cd49f5-783c-44af-ab4f-bb44d1dd33fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/typing_speed_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="25cd49f5-783c-44af-ab4f-bb44d1dd33fb" name="Changes" comment="base di Tkinter">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,67 +23,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "alicecaperdoni-debug"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/alicecaperdoni-debug/typing_speed_test.git",
+    "accountId": "eed56c05-4084-477a-96ee-4b60e2d10266"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0006588710365945" />
-      <entry key="MS500" value="1.3292639067435226" />
-      <entry key="S2" value="3.1564101331239467" />
-      <entry key="S5" value="5.822144617632772" />
-      <entry key="S10" value="9.104147083332778" />
-      <entry key="S30" value="17.34533210582259" />
-      <entry key="S60" value="27.645030894635294" />
-      <entry key="M2" value="41.65991419182226" />
-      <entry key="M5" value="61.49494994648353" />
-      <entry key="M10" value="84.1352312764872" />
-      <entry key="M15" value="104.75247186510711" />
-      <entry key="M30" value="149.31786421374406" />
-      <entry key="H1" value="191.54160035346328" />
-      <entry key="H2" value="221.53785124924562" />
-      <entry key="H4" value="239.55871250050637" />
-      <entry key="D1" value="256.41021779056393" />
-      <entry key="W1" value="259.48248703883394" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000004592266407" />
+      <entry key="S2" value="1.054907108193643" />
+      <entry key="S5" value="1.4691015733478523" />
+      <entry key="S10" value="2.098882700136835" />
+      <entry key="S30" value="3.493147513017471" />
+      <entry key="S60" value="5.206801071731771" />
+      <entry key="M2" value="8.452129874849906" />
+      <entry key="M5" value="16.660891080072336" />
+      <entry key="M10" value="28.373335760728462" />
+      <entry key="M15" value="37.111248748290194" />
+      <entry key="M30" value="58.27078538345994" />
+      <entry key="H1" value="104.7011969869252" />
+      <entry key="H2" value="174.3311569255791" />
+      <entry key="H4" value="239.07902588027395" />
+      <entry key="D1" value="319.88117204575974" />
+      <entry key="W1" value="337.0322451291312" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="4.593164681820136E-174" />
-      <entry key="S5" value="4.6221582101109253E-70" />
-      <entry key="S10" value="2.1499205125099247E-35" />
-      <entry key="S30" value="2.780614966031988E-12" />
-      <entry key="S60" value="1.6684801458004276E-6" />
-      <entry key="M2" value="0.0013464196053889711" />
-      <entry key="M5" value="0.11583410235458208" />
-      <entry key="M10" value="0.7297017647631701" />
-      <entry key="M15" value="1.431383140518066" />
-      <entry key="M30" value="2.8911288630797514" />
-      <entry key="H1" value="4.151527115947438" />
-      <entry key="H2" value="4.986991946224953" />
-      <entry key="H4" value="5.469038092932864" />
-      <entry key="D1" value="5.9078977391219905" />
-      <entry key="W1" value="5.98675125794685" />
+      <entry key="S2" value="4.918319168732509E-123" />
+      <entry key="S5" value="1.2034094509407555E-49" />
+      <entry key="S10" value="3.7733157817104386E-25" />
+      <entry key="S30" value="1.018857575842267E-8" />
+      <entry key="S60" value="1.415447028636075E-4" />
+      <entry key="M2" value="0.01904169655359114" />
+      <entry key="M5" value="0.4987511056404395" />
+      <entry key="M10" value="1.6709469931292036" />
+      <entry key="M15" value="2.542984944499739" />
+      <entry key="M30" value="4.033703384555271" />
+      <entry key="H1" value="5.754910185482235" />
+      <entry key="H2" value="7.738713473782636" />
+      <entry key="H4" value="9.442463434586031" />
+      <entry key="D1" value="11.496162896635944" />
+      <entry key="W1" value="11.925825680984909" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9271901720866706" />
-      <entry key="MS500" value="1.307839591918541" />
-      <entry key="S2" value="3.1373384431443085" />
-      <entry key="S5" value="5.806944911684505" />
-      <entry key="S10" value="9.092631041836453" />
-      <entry key="S30" value="17.338354902055077" />
-      <entry key="S60" value="27.639334530303383" />
-      <entry key="M2" value="41.65484078441038" />
-      <entry key="M5" value="61.59185390096261" />
-      <entry key="M10" value="84.82938304515315" />
-      <entry key="M15" value="106.142270995243" />
-      <entry key="M30" value="152.16937541774863" />
-      <entry key="H1" value="195.66479110799324" />
-      <entry key="H2" value="226.5077332768067" />
-      <entry key="H4" value="245.01832595463912" />
-      <entry key="D1" value="262.3164105873178" />
-      <entry key="W1" value="265.46899125805055" />
+      <entry key="MS100" value="3.633120064919384E-11" />
+      <entry key="MS500" value="0.00816730373028511" />
+      <entry key="S2" value="0.3332508686617261" />
+      <entry key="S5" value="1.0140230679149902" />
+      <entry key="S10" value="1.8083846268959707" />
+      <entry key="S30" value="3.3583083935290268" />
+      <entry key="S60" value="5.112632330591167" />
+      <entry key="M2" value="8.39944666797785" />
+      <entry key="M5" value="17.105799908063567" />
+      <entry key="M10" value="29.998686423444305" />
+      <entry key="M15" value="39.61499824719253" />
+      <entry key="M30" value="62.27616359363097" />
+      <entry key="H1" value="110.43422349418452" />
+      <entry key="H2" value="182.05329839309684" />
+      <entry key="H4" value="248.5105745871007" />
+      <entry key="D1" value="331.3749658742501" />
+      <entry key="W1" value="348.957715639597" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -137,9 +144,22 @@
       <option name="presentableId" value="Default" />
       <updated>1793632391620</updated>
     </task>
+    <task id="LOCAL-00001" summary="base di Tkinter">
+      <option name="closed" value="true" />
+      <created>1793716708613</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1793716708613</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="base di Tkinter" />
+    <option name="LAST_COMMIT_MESSAGE" value="base di Tkinter" />
   </component>
 </project>
