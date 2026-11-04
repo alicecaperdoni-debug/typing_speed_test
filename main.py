@@ -16,7 +16,10 @@ TEXT = ["casa", "tempo", "giorno", "mondo", "vita", "mano", "parte", "occhio", "
 # STRING_TEXT = " ".join(TEXT)
 timer = None
 
-#TODO  Fai avviare countdown all'inizio della digitazione
+#TODO  Fai scorrere le parole mano a mano (crea altra funzione solo per text_label config)
+def key_handler(event):
+        start_timer(60)
+        text_label.config(text=f"{TEXT[0]} {TEXT[1]} {TEXT[2]}", fg="black")
 
 def start_timer(count):
         global timer
@@ -44,15 +47,15 @@ main_label.config(font=(FONT_NAME, 18, "bold"))
 main_label.pack()
 
 canvas = tk.Canvas(width=200, height=125, highlightthickness=0) #colore background + eliminare "cornice" che rimaneva bianca
-timer_text = canvas.create_text(100, 100, text="00:00", fill="green", font=(FONT_NAME, 35, "bold")) #testo sopra all'immagine canvas
+timer_text = canvas.create_text(100, 100, text="1:00", fill="green", font=(FONT_NAME, 35, "bold")) #testo sopra all'immagine canvas
 canvas.pack()
 
-explanation_label = tk.Label(text="Premi la barra spaziatrice dopo ogni parola.\nDa quando inizi a digitare hai 1 "
-                                  "minuto di tempo.\nCopia il testo seguente:")
+explanation_label = tk.Label(text="Dovrai copiare delle parole, ed ogni parola dovrà essere seguita da uno spazio.\n"
+                                  "Premi la barra spaziatrice per iniziare.")
 explanation_label.config(font=(FONT_NAME, 12, "bold"), pady=10)
 explanation_label.pack()
 
-text_label = tk.Label(text=f"{TEXT[0]} {TEXT[1]} {TEXT[2]}", width=50)
+text_label = tk.Label(text="Le parole compariranno qui", fg="grey", width=50)
 text_label.config(font=(FONT_NAME, 12), bd=1, relief="sunken")
 text_label.pack()
 
@@ -61,7 +64,9 @@ entry = tk.Entry(width=50, bd=1, font=(FONT_NAME, 12))
 #entry.get()
 entry.pack()
 
-start_timer(60)
+root.bind("<space>", key_handler)
+
+#TODO Crea tasto annulla (se uno vuole ripartire)
 
 #TODO Salvataggio dei punteggi (es. record per ogni utente, fai scegliere nome utente all'inizio)
 
