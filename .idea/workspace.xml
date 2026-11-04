@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25cd49f5-783c-44af-ab4f-bb44d1dd33fb" name="Changes" comment="base di Tkinter">
+    <list default="true" id="25cd49f5-783c-44af-ab4f-bb44d1dd33fb" name="Changes" comment="prova di timer, da correggere">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -23,18 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "alicecaperdoni-debug"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alicecaperdoni-debug&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/alicecaperdoni-debug/typing_speed_test.git",
-    "accountId": "eed56c05-4084-477a-96ee-4b60e2d10266"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alicecaperdoni-debug/typing_speed_test.git&quot;,
+    &quot;accountId&quot;: &quot;eed56c05-4084-477a-96ee-4b60e2d10266&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -42,60 +42,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000004592266407" />
-      <entry key="S2" value="1.054907108193643" />
-      <entry key="S5" value="1.4691015733478523" />
-      <entry key="S10" value="2.098882700136835" />
-      <entry key="S30" value="3.493147513017471" />
-      <entry key="S60" value="5.206801071731771" />
-      <entry key="M2" value="8.452129874849906" />
-      <entry key="M5" value="16.660891080072336" />
-      <entry key="M10" value="28.373335760728462" />
-      <entry key="M15" value="37.111248748290194" />
-      <entry key="M30" value="58.27078538345994" />
-      <entry key="H1" value="104.7011969869252" />
-      <entry key="H2" value="174.3311569255791" />
-      <entry key="H4" value="239.07902588027395" />
-      <entry key="D1" value="319.88117204575974" />
-      <entry key="W1" value="337.0322451291312" />
+      <entry key="MS500" value="1.000018386998897" />
+      <entry key="S2" value="1.1059157317005432" />
+      <entry key="S5" value="1.7546754612892224" />
+      <entry key="S10" value="2.4940491710344093" />
+      <entry key="S30" value="3.4053482519256937" />
+      <entry key="S60" value="4.330347284400743" />
+      <entry key="M2" value="7.51710723064089" />
+      <entry key="M5" value="18.43941711368765" />
+      <entry key="M10" value="34.12316504633872" />
+      <entry key="M15" value="46.66193561357275" />
+      <entry key="M30" value="74.70363943555691" />
+      <entry key="H1" value="124.73128473069163" />
+      <entry key="H2" value="198.7312541535977" />
+      <entry key="H4" value="269.6781710748962" />
+      <entry key="D1" value="360.8868648500653" />
+      <entry key="W1" value="380.5812079942688" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="4.918319168732509E-123" />
-      <entry key="S5" value="1.2034094509407555E-49" />
-      <entry key="S10" value="3.7733157817104386E-25" />
-      <entry key="S30" value="1.018857575842267E-8" />
-      <entry key="S60" value="1.415447028636075E-4" />
-      <entry key="M2" value="0.01904169655359114" />
-      <entry key="M5" value="0.4987511056404395" />
-      <entry key="M10" value="1.6709469931292036" />
-      <entry key="M15" value="2.542984944499739" />
-      <entry key="M30" value="4.033703384555271" />
-      <entry key="H1" value="5.754910185482235" />
-      <entry key="H2" value="7.738713473782636" />
-      <entry key="H4" value="9.442463434586031" />
-      <entry key="D1" value="11.496162896635944" />
-      <entry key="W1" value="11.925825680984909" />
+      <entry key="S2" value="4.0422699719303955E-102" />
+      <entry key="S5" value="2.7710867782341596E-41" />
+      <entry key="S10" value="5.264111300337559E-21" />
+      <entry key="S30" value="1.7395691120862633E-7" />
+      <entry key="S60" value="4.1708182823833195E-4" />
+      <entry key="M2" value="0.020454895320852432" />
+      <entry key="M5" value="0.24977189550868356" />
+      <entry key="M10" value="0.9258017723927017" />
+      <entry key="M15" value="1.6816167605324719" />
+      <entry key="M30" value="3.407993038285203" />
+      <entry key="H1" value="5.530992734587284" />
+      <entry key="H2" value="7.895441147430534" />
+      <entry key="H4" value="9.921751498494537" />
+      <entry key="D1" value="12.389376893907427" />
+      <entry key="W1" value="12.909970265089536" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.633120064919384E-11" />
-      <entry key="MS500" value="0.00816730373028511" />
-      <entry key="S2" value="0.3332508686617261" />
-      <entry key="S5" value="1.0140230679149902" />
-      <entry key="S10" value="1.8083846268959707" />
-      <entry key="S30" value="3.3583083935290268" />
-      <entry key="S60" value="5.112632330591167" />
-      <entry key="M2" value="8.39944666797785" />
-      <entry key="M5" value="17.105799908063567" />
-      <entry key="M10" value="29.998686423444305" />
-      <entry key="M15" value="39.61499824719253" />
-      <entry key="M30" value="62.27616359363097" />
-      <entry key="H1" value="110.43422349418452" />
-      <entry key="H2" value="182.05329839309684" />
-      <entry key="H4" value="248.5105745871007" />
-      <entry key="D1" value="331.3749658742501" />
-      <entry key="W1" value="348.957715639597" />
+      <entry key="MS100" value="4.051797500431742E-20" />
+      <entry key="MS500" value="1.3786817525160793E-4" />
+      <entry key="S2" value="0.18114551287892228" />
+      <entry key="S5" value="1.0502697667754537" />
+      <entry key="S10" value="2.0112948355415132" />
+      <entry key="S30" value="3.197110501229826" />
+      <entry key="S60" value="4.209240607508027" />
+      <entry key="M2" value="7.454069643691995" />
+      <entry key="M5" value="18.629820469413392" />
+      <entry key="M10" value="34.999306515037716" />
+      <entry key="M15" value="48.29904286614688" />
+      <entry key="M30" value="78.07727042616517" />
+      <entry key="H1" value="130.23606979450693" />
+      <entry key="H2" value="206.60737457105122" />
+      <entry key="H4" value="279.5873202744289" />
+      <entry key="D1" value="373.2735120527463" />
+      <entry key="W1" value="393.4907688840385" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -110,25 +110,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -152,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793716708613</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="prova di timer, da correggere">
+      <option name="closed" value="true" />
+      <created>1793724827210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1793724827210</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +168,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base di Tkinter" />
-    <option name="LAST_COMMIT_MESSAGE" value="base di Tkinter" />
+    <MESSAGE value="prova di timer, da correggere" />
+    <option name="LAST_COMMIT_MESSAGE" value="prova di timer, da correggere" />
   </component>
 </project>
