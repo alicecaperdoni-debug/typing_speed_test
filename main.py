@@ -15,11 +15,22 @@ TEXT = ["casa", "tempo", "giorno", "mondo", "vita", "mano", "parte", "occhio", "
         "scelta", "azione", "opera", "frutto", "seme", "pianta", "foglia", "ramo", "radice"]
 # STRING_TEXT = " ".join(TEXT)
 timer = None
+first = 0
+second = 1
+third = 2
 
 #TODO  Fai scorrere le parole mano a mano (crea altra funzione solo per text_label config)
-def key_handler(event):
+def return_key_handler(event):
         start_timer(60)
-        text_label.config(text=f"{TEXT[0]} {TEXT[1]} {TEXT[2]}", fg="black")
+        text_label.config(text=f"{TEXT[first]} {TEXT[second]} {TEXT[third]}", fg="black")
+
+def space_key_handler(event):
+        global first, second, third
+        first += 1
+        second += 1
+        third +=1
+        text_label.config(text=f"{TEXT[first]} {TEXT[second]} {TEXT[third]}")
+
 
 def start_timer(count):
         global timer
@@ -40,9 +51,9 @@ def start_timer(count):
 root = tk.Tk()
 root.title("Typing Speed Test")
 root.config(padx=100, pady=50)
-root.minsize(500, 700)
+root.minsize(300, 500)
 
-main_label = tk.Label(text="Welcome to the Typing Speed Test by Alis!", fg="blue")
+main_label = tk.Label(text="TYPING SPEED TEST\nBenvenuto/a!", fg="blue")
 main_label.config(font=(FONT_NAME, 18, "bold"))
 main_label.pack()
 
@@ -50,8 +61,8 @@ canvas = tk.Canvas(width=200, height=125, highlightthickness=0) #colore backgrou
 timer_text = canvas.create_text(100, 100, text="1:00", fill="green", font=(FONT_NAME, 35, "bold")) #testo sopra all'immagine canvas
 canvas.pack()
 
-explanation_label = tk.Label(text="Dovrai copiare delle parole, ed ogni parola dovrà essere seguita da uno spazio.\n"
-                                  "Premi la barra spaziatrice per iniziare.")
+explanation_label = tk.Label(text="Dovrai copiare delle parole; ogni parola dovrà essere seguita da uno SPAZIO.\n"
+                                  "Premi invio per iniziare.")
 explanation_label.config(font=(FONT_NAME, 12, "bold"), pady=10)
 explanation_label.pack()
 
@@ -60,11 +71,12 @@ text_label.config(font=(FONT_NAME, 12), bd=1, relief="sunken")
 text_label.pack()
 
 entry = tk.Entry(width=50, bd=1, font=(FONT_NAME, 12))
-# entry.focus()
+entry.focus()
 #entry.get()
 entry.pack()
 
-root.bind("<space>", key_handler)
+root.bind("<Return>", return_key_handler)
+root.bind("<space>", space_key_handler)
 
 #TODO Crea tasto annulla (se uno vuole ripartire)
 
