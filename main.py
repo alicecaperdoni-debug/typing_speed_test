@@ -2,10 +2,10 @@ import tkinter as tk
 from tkinter import messagebox as mb
 import math
 import itertools
+import random
 
 FONT_NAME = "courier new"
-#TODO randomizza le parole per averle in ordine casuale ogni volta; fai contare il punteggio con la lista randomizzata
-TEXT = ["casa", "tempo", "giorno", "mondo", "vita", "mano", "parte", "occhio", "donna", "uomo", "stato", "lavoro",
+WORDS = ["casa", "tempo", "giorno", "mondo", "vita", "mano", "parte", "occhio", "donna", "uomo", "stato", "lavoro",
         "parola", "problema", "momento", "strada", "forza", "paese", "punto", "bambino", "notte", "storia", "voce",
         "testa", "aria", "gioco", "libertà", "amore", "amico", "scuola", "chiave", "tempo", "giro", "corso", "lume",
         "mare", "terra", "fuoco", "vento", "fiore", "pietra", "fiume", "bosco", "montagna", "stella", "luna", "sole",
@@ -14,26 +14,34 @@ TEXT = ["casa", "tempo", "giorno", "mondo", "vita", "mano", "parte", "occhio", "
         "paese", "regione", "popolo", "stato", "governo", "legge", "diritto", "pace", "guerra", "forza", "mente",
         "cuore", "anima", "spirito", "pensiero", "idea", "sogno", "verità", "segreto", "mistero", "dubbio", "ragione",
         "scelta", "azione", "opera", "frutto", "seme", "pianta", "foglia", "ramo", "radice"]
+random_words = []
 
 timer = None
 first = 0
 second = 1
 third = 2
 
-#TODO Rischiacciare invio non fa ripartire il countdown
-
+game_on = False
 # Key handlers
 def return_key_handler(event):
-        start_timer(10)
-        # start_timer(60)
-        text_label.config(text=f"{TEXT[first]} {TEXT[second]} {TEXT[third]}", fg="black")
+        global game_on
+        if not game_on:
+            game_on = True
+            start_timer(10)
+            # start_timer(60)
+            for i in range(len(WORDS)):
+                random_words.append(random.choice(WORDS))
+            print(random_words)
+            text_label.config(text=f"{random_words[first]} {random_words[second]} {random_words[third]}", fg="black")
+        else:
+            pass
 
 def space_key_handler(event):
         global first, second, third
         first += 1
         second += 1
         third +=1
-        text_label.config(text=f"{TEXT[first-1]}\n{TEXT[first]} {TEXT[second]} {TEXT[third]}")
+        text_label.config(text=f"{random_words[first-1]}\n{random_words[first]} {random_words[second]} {random_words[third]}")
 
 # Get Value
 def get_value():
@@ -47,7 +55,7 @@ def check_result():
     words_list = get_value().split()
     char_list = get_value()
     for word in words_list:
-        if word == TEXT[words_list.index(word)]:
+        if word == random_words[words_list.index(word)]:
             correct_words.append(word)
         else:
             wrong_words.append(word)
@@ -117,7 +125,7 @@ entry.pack()
 root.bind("<Return>", return_key_handler)
 root.bind("<space>", space_key_handler)
 
-#TODO Crea tasto annulla (se uno vuole ripartire)
+#TODO Button 'annulla'; Button 'ricomincia'
 
 #TODO Salvataggio dei punteggi (es. record per ogni utente, fai scegliere nome utente all'inizio)
 
