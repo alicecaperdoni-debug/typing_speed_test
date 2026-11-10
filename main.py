@@ -1,5 +1,6 @@
 import tkinter as tk
-from tkinter import messagebox as mb
+from tkinter import messagebox as mb, simpledialog
+import csv
 import math
 import itertools
 import random
@@ -17,11 +18,11 @@ WORDS = ["casa", "tempo", "giorno", "mondo", "vita", "mano", "parte", "occhio", 
 random_words = []
 
 timer = None
+game_on = False
 first = 0
 second = 1
 third = 2
 
-game_on = False
 # Key handlers
 def return_key_handler(event):
         global game_on
@@ -47,6 +48,66 @@ def space_key_handler(event):
 def get_value():
     answer = entry.get()
     return answer
+
+# Salvare il punteggio
+def save_score(score):
+    fields = ['Name', 'High Score']
+    save = mb.askyesno("Salvataggio", message="Vuoi salvare/aggiornare il tuo punteggio?")
+
+    if save:
+        new_user = True
+        username = simpledialog.askstring("Il tuo nome", prompt="Scrivi il tuo nickname:")
+        new_row = {'Name': username,
+                   'High Score': score}
+
+        with open("scores.csv","r+") as s:
+            df = csv.DictReader(s)
+            writer = csv.DictWriter(s, fields)
+
+            for row in df:
+                if row['Name'] == username:
+                    new_user = False
+                    if int(row['High Score']) < score:
+                        #TODO Tutorial per aggiornare dati
+
+                        # op = open("AllDetails.csv", "r")
+                        # dt = csv.DictReader(op)
+                        # print(dt)
+                        # up_dt = []
+                        # for r in dt:
+                        #     print(r)
+                        #     row = {'Sno': r['Sno'],
+                        #            'Registration Number': r['Registration Number'],
+                        #            'Name': r['Name'],
+                        #            'RollNo': r['RollNo'],
+                        #            'Status': 'P'}
+                        #     up_dt.append(row)
+                        # print(up_dt)
+                        # op.close()
+                        # op = open("AllDetails.csv", "w", newline='')
+                        # headers = ['Sno', 'Registration Number', 'Name', 'RollNo', 'Status']
+                        # data = csv.DictWriter(op, delimiter=',', fieldnames=headers)
+                        # data.writerow(dict((heads, heads) for heads in headers))
+                        # data.writerows(up_dt)
+                        #
+                        # op.close()
+
+                        writer.writerow(new_row)
+                        mb.showinfo("Salvataggio", message="Il tuo punteggio più alto è stato aggiornato.")
+                        break
+                    else:
+                        mb.showinfo("Salvataggio", message=f"Non hai superato il tuo punteggio più alto "
+                                                           f"({row['High Score']})")
+                        break
+                else:
+                    continue
+            s.close()
+
+        if new_user:
+            with open("scores.csv", "a", newline='') as s2:
+                writer = csv.DictWriter(s2, fields)
+                writer.writerow(new_row)
+                mb.showinfo("Salvataggio", message="Il tuo primo punteggio è stato inserito!")
 
 # Calcolo punteggio
 def check_result():
@@ -78,17 +139,22 @@ def check_result():
                                          f"Parole scritte correttamente: {len(correct_words)}\n"
                                          f"Parole sbagliate: {len(wrong_words)}\n"
                                          f"Il tuo punteggio finale è: {points}")
+    save_score(points)
+#TODO Salvataggio dei punteggi (es. record per ogni utente, fai scegliere nome utente all'inizio)
+#Fai inserire nome giocatore all'inizio (messagebox con inserimento).
+#Se persona già presente e se punteggio più alto, sostituisci punteggio; crea riga persona se non c'è.
 
 # Timer
 def start_timer(count):
         global timer
-        count_min = math.floor(count / 60)  # senza i decimali per aver i minuti che mancano
-        count_sec = count % 60  # ci dà il remainder, quindi i secondi che mancano
+        count_min = math.floor(count / 60)
+        count_sec = count % 60
 
         if count_sec < 10:
-            count_sec = f"0{count_sec}"  # Dynamic Typing: cambiare il tipo di una variabile
+            count_sec = f"0{count_sec}"
 
         canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
+
         if count > 0:
             timer = root.after(1000, start_timer, count - 1)
         if count == 0:
@@ -106,7 +172,7 @@ main_label.config(font=(FONT_NAME, 18, "bold"))
 main_label.pack()
 
 canvas = tk.Canvas(width=300, height=200, highlightthickness=0) #colore background + eliminare "cornice" che rimaneva bianca
-timer_text = canvas.create_text(100, 100, text="1:00", fill="green", font=(FONT_NAME, 35, "bold")) #testo sopra all'immagine canvas
+timer_text = canvas.create_text(150, 100, text="1:00", fill="green", font=(FONT_NAME, 35, "bold")) #testo sopra all'immagine canvas
 canvas.pack()
 
 explanation_label = tk.Label(text="Dovrai copiare delle parole; ogni parola dovrà essere seguita da uno SPAZIO.\n"
@@ -124,9 +190,5 @@ entry.pack()
 
 root.bind("<Return>", return_key_handler)
 root.bind("<space>", space_key_handler)
-
-#TODO Button 'annulla'; Button 'ricomincia'
-
-#TODO Salvataggio dei punteggi (es. record per ogni utente, fai scegliere nome utente all'inizio)
 
 root.mainloop()
