@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox as mb, simpledialog
 import csv
+import pandas
 import math
 import itertools
 import random
@@ -37,6 +38,8 @@ def return_key_handler(event):
         else:
             pass
 
+#TODO rendere più chiara la parola che è da scrivere
+
 def space_key_handler(event):
         global first, second, third
         first += 1
@@ -55,55 +58,31 @@ def save_score(score):
     save = mb.askyesno("Salvataggio", message="Vuoi salvare/aggiornare il tuo punteggio?")
 
     if save:
-        new_user = True
         username = simpledialog.askstring("Il tuo nome", prompt="Scrivi il tuo nickname:")
         new_row = {'Name': username,
                    'High Score': score}
 
-        with open("scores.csv","r+") as s:
-            df = csv.DictReader(s)
-            writer = csv.DictWriter(s, fields)
+        data = pandas.read_csv("scores.csv")
+        users_list = data['Name'].to_list()
 
-            for row in df:
-                if row['Name'] == username:
-                    new_user = False
-                    if int(row['High Score']) < score:
-                        #TODO Tutorial per aggiornare dati
+        if username in users_list:
+            user_data = data[data['Name'] == username]
+            print(type(user_data))
+#TODO l'if qua sotto crea nuova riga e nuova colonna nella copia
+            if (user_data['High Score'] < score).any():
+                new_data_copy = data.copy()
+                new_data_copy.loc[username, 'High Score'] = score
+                new_data_copy.to_csv("scores.csv")
+                # data.at[user_data['Name']]['High Score'] = score
+                # user_data['High Score'] = user_data['High Score'].replace({user_data['High Score']: score})
+                # data.to_csv("scores.csv", index=False)
+                mb.showinfo("Salvataggio", message="Il tuo punteggio più alto è stato aggiornato.")
 
-                        # op = open("AllDetails.csv", "r")
-                        # dt = csv.DictReader(op)
-                        # print(dt)
-                        # up_dt = []
-                        # for r in dt:
-                        #     print(r)
-                        #     row = {'Sno': r['Sno'],
-                        #            'Registration Number': r['Registration Number'],
-                        #            'Name': r['Name'],
-                        #            'RollNo': r['RollNo'],
-                        #            'Status': 'P'}
-                        #     up_dt.append(row)
-                        # print(up_dt)
-                        # op.close()
-                        # op = open("AllDetails.csv", "w", newline='')
-                        # headers = ['Sno', 'Registration Number', 'Name', 'RollNo', 'Status']
-                        # data = csv.DictWriter(op, delimiter=',', fieldnames=headers)
-                        # data.writerow(dict((heads, heads) for heads in headers))
-                        # data.writerows(up_dt)
-                        #
-                        # op.close()
+            else:
+                mb.showinfo("Salvataggio", message=f"Non hai superato il tuo punteggio più alto "
+                                                   f"({user_data['High Score']})")
 
-                        writer.writerow(new_row)
-                        mb.showinfo("Salvataggio", message="Il tuo punteggio più alto è stato aggiornato.")
-                        break
-                    else:
-                        mb.showinfo("Salvataggio", message=f"Non hai superato il tuo punteggio più alto "
-                                                           f"({row['High Score']})")
-                        break
-                else:
-                    continue
-            s.close()
-
-        if new_user:
+        else:
             with open("scores.csv", "a", newline='') as s2:
                 writer = csv.DictWriter(s2, fields)
                 writer.writerow(new_row)
@@ -140,9 +119,8 @@ def check_result():
                                          f"Parole sbagliate: {len(wrong_words)}\n"
                                          f"Il tuo punteggio finale è: {points}")
     save_score(points)
-#TODO Salvataggio dei punteggi (es. record per ogni utente, fai scegliere nome utente all'inizio)
-#Fai inserire nome giocatore all'inizio (messagebox con inserimento).
-#Se persona già presente e se punteggio più alto, sostituisci punteggio; crea riga persona se non c'è.
+
+#TODO Allo scadere del tempo i tasti non fanno andare avanti i messagebox
 
 # Timer
 def start_timer(count):
