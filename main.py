@@ -29,23 +29,19 @@ def return_key_handler(event):
         global game_on
         if not game_on:
             game_on = True
-            start_timer(10)
-            # start_timer(60)
+            start_timer(60)
             for i in range(len(WORDS)):
                 random_words.append(random.choice(WORDS))
-            print(random_words)
             text_label.config(text=f"{random_words[first]} {random_words[second]} {random_words[third]}", fg="black")
         else:
             pass
-
-#TODO rendere più chiara la parola che è da scrivere
 
 def space_key_handler(event):
         global first, second, third
         first += 1
         second += 1
         third +=1
-        text_label.config(text=f"{random_words[first-1]}\n{random_words[first]} {random_words[second]} {random_words[third]}")
+        text_label.config(text=f"{random_words[first-1]} {random_words[first]} {random_words[second]} {random_words[third]}")
 
 # Get Value
 def get_value():
@@ -125,8 +121,6 @@ def check_result():
     if save:
         username = simpledialog.askstring("Il tuo nome", prompt="Scrivi il tuo nickname:")
         save_score(username, points)
-
-#TODO Allo scadere del tempo i tasti non fanno andare avanti i messagebox
 
 # Timer
 def start_timer(count):
