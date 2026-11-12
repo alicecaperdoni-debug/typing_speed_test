@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox as mb, simpledialog
 import csv
-import pandas
+import os
 import math
 import itertools
 import random
@@ -53,40 +53,42 @@ def get_value():
     return answer
 
 # Salvare il punteggio
-def save_score(score):
-    fields = ['Name', 'High Score']
-    save = mb.askyesno("Salvataggio", message="Vuoi salvare/aggiornare il tuo punteggio?")
+def save_score(username, new_score, file_path="scores.csv"):
+    scores = {}
 
-    if save:
-        username = simpledialog.askstring("Il tuo nome", prompt="Scrivi il tuo nickname:")
-        new_row = {'Name': username,
-                   'High Score': score}
+    # 1. Leggi il file esistente (se esiste) e carica i dati nel dizionario
+    if os.path.exists(file_path):
+        with open(file_path, mode="r", encoding="utf-8") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                if "Name" in row and "High Score" in row:
+                    user = row["Name"]
+                    try:
+                        score = int(row["High Score"])
+                    except ValueError:
+                        score = 0
+                    scores[user] = score
 
-        data = pandas.read_csv("scores.csv")
-        users_list = data['Name'].to_list()
-
-        if username in users_list:
-            user_data = data[data['Name'] == username]
-            print(type(user_data))
-#TODO l'if qua sotto crea nuova riga e nuova colonna nella copia
-            if (user_data['High Score'] < score).any():
-                new_data_copy = data.copy()
-                new_data_copy.loc[username, 'High Score'] = score
-                new_data_copy.to_csv("scores.csv")
-                # data.at[user_data['Name']]['High Score'] = score
-                # user_data['High Score'] = user_data['High Score'].replace({user_data['High Score']: score})
-                # data.to_csv("scores.csv", index=False)
-                mb.showinfo("Salvataggio", message="Il tuo punteggio più alto è stato aggiornato.")
-
-            else:
-                mb.showinfo("Salvataggio", message=f"Non hai superato il tuo punteggio più alto "
-                                                   f"({user_data['High Score']})")
-
+    # 2. Verifica se l'utente esiste già e confronta il punteggio
+    if username in scores:
+        if new_score > scores[username]:
+            mb.showinfo("Salvataggio", message=f"Nuovo record personale per {username}! {new_score} (Precedente: {scores[username]})")
+            scores[username] = new_score
         else:
-            with open("scores.csv", "a", newline='') as s2:
-                writer = csv.DictWriter(s2, fields)
-                writer.writerow(new_row)
-                mb.showinfo("Salvataggio", message="Il tuo primo punteggio è stato inserito!")
+            mb.showinfo("Salvataggio", message=f"Punteggio non superato. Il tuo record resta {scores[username]}.")
+    else:
+        # Se è un nuovo utente, aggiungilo
+        mb.showinfo("Salvataggio", message=f"Primo punteggio registrato per {username}: {new_score}!")
+        scores[username] = new_score
+
+    # 3. Riscrivi il file CSV usando le intestazioni "Name" e "High Score"
+    with open(file_path, mode="w", newline="", encoding="utf-8") as file:
+        fieldnames = ["Name", "High Score"]
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+
+        writer.writeheader()
+        for user, score in scores.items():
+            writer.writerow({"Name": user, "High Score": score})
 
 # Calcolo punteggio
 def check_result():
@@ -118,7 +120,11 @@ def check_result():
                                          f"Parole scritte correttamente: {len(correct_words)}\n"
                                          f"Parole sbagliate: {len(wrong_words)}\n"
                                          f"Il tuo punteggio finale è: {points}")
-    save_score(points)
+
+    save = mb.askyesno("Salvataggio", message="Vuoi salvare/aggiornare il tuo punteggio?")
+    if save:
+        username = simpledialog.askstring("Il tuo nome", prompt="Scrivi il tuo nickname:")
+        save_score(username, points)
 
 #TODO Allo scadere del tempo i tasti non fanno andare avanti i messagebox
 

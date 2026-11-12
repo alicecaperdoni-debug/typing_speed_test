@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25cd49f5-783c-44af-ab4f-bb44d1dd33fb" name="Changes" comment="creata funzione per salvataggio high score (da correggere aggiornamento high score)">
+    <list default="true" id="25cd49f5-783c-44af-ab4f-bb44d1dd33fb" name="Changes" comment="Tentativo di risoluzione problema aggiornamento high score">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scores.csv" afterDir="false" />
@@ -13,6 +13,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="9" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,61 +45,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0047766714458486" />
-      <entry key="MS500" value="1.415121588556571" />
-      <entry key="S2" value="3.1375271307294406" />
-      <entry key="S5" value="5.708084229221843" />
-      <entry key="S10" value="8.080983938819998" />
-      <entry key="S30" value="11.523395612939316" />
-      <entry key="S60" value="13.939436298689442" />
-      <entry key="M2" value="17.159979321461027" />
-      <entry key="M5" value="25.886802701299384" />
-      <entry key="M10" value="39.6117416200382" />
-      <entry key="M15" value="53.29368902432384" />
-      <entry key="M30" value="98.7143898325037" />
-      <entry key="H1" value="192.14528313078753" />
-      <entry key="H2" value="347.8687801785172" />
-      <entry key="H4" value="587.2807255058225" />
-      <entry key="D1" value="1200.638777068825" />
-      <entry key="W1" value="1404.3529000624515" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000000145002781" />
+      <entry key="S2" value="1.0308374209035376" />
+      <entry key="S5" value="1.449383043333831" />
+      <entry key="S10" value="2.309664845367207" />
+      <entry key="S30" value="5.047859853008354" />
+      <entry key="S60" value="7.318173031592161" />
+      <entry key="M2" value="9.405469311248734" />
+      <entry key="M5" value="14.014193901585628" />
+      <entry key="M10" value="23.23355311180387" />
+      <entry key="M15" value="33.7695359757394" />
+      <entry key="M30" value="70.59579442406135" />
+      <entry key="H1" value="155.42035618782458" />
+      <entry key="H2" value="313.8628851410533" />
+      <entry key="H4" value="565.9138111735406" />
+      <entry key="D1" value="1238.8851156987873" />
+      <entry key="W1" value="1469.8365198615813" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.3385746094771979E-185" />
-      <entry key="S2" value="6.048680509359685E-47" />
-      <entry key="S5" value="3.255849025093124E-19" />
-      <entry key="S10" value="5.706004753867887E-10" />
-      <entry key="S30" value="8.295521178134292E-4" />
-      <entry key="S60" value="0.029155600454593474" />
-      <entry key="M2" value="0.18856904022670523" />
-      <entry key="M5" value="0.698168736919649" />
-      <entry key="M10" value="1.2216442966349461" />
-      <entry key="M15" value="1.6406063189274553" />
-      <entry key="M30" value="3.1410091586199984" />
-      <entry key="H1" value="6.976724660787776" />
-      <entry key="H2" value="14.502736373708045" />
-      <entry key="H4" value="26.500564210462784" />
-      <entry key="D1" value="55.24813617302866" />
-      <entry key="W1" value="64.30261340952607" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="3.835749551308986E-132" />
+      <entry key="S5" value="2.713564176185347E-53" />
+      <entry key="S10" value="5.2091885975660676E-27" />
+      <entry key="S30" value="1.7408170510605623E-9" />
+      <entry key="S60" value="4.438333734303723E-5" />
+      <entry key="M2" value="0.008392246778870729" />
+      <entry key="M5" value="0.27757107941666087" />
+      <entry key="M10" value="1.1419086073556366" />
+      <entry key="M15" value="2.002787658611344" />
+      <entry key="M30" value="4.146689110856481" />
+      <entry key="H1" value="8.066741193432806" />
+      <entry key="H2" value="15.6315331997301" />
+      <entry key="H4" value="28.091359727204164" />
+      <entry key="D1" value="59.70005465858708" />
+      <entry key="W1" value="70.04412500868837" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8452013569758694" />
-      <entry key="MS500" value="1.3717954117162283" />
-      <entry key="S2" value="3.115207903036852" />
-      <entry key="S5" value="5.6919292332261895" />
-      <entry key="S10" value="8.069111921196061" />
-      <entry key="S30" value="11.507994282350689" />
-      <entry key="S60" value="13.94327803757457" />
-      <entry key="M2" value="17.309835115532405" />
-      <entry key="M5" value="26.53137943414659" />
-      <entry key="M10" value="40.77834074168096" />
-      <entry key="M15" value="54.88015638750326" />
-      <entry key="M30" value="101.80263698418386" />
-      <entry key="H1" value="199.0720076005606" />
-      <entry key="H2" value="362.3284799084252" />
-      <entry key="H4" value="613.7473163314056" />
-      <entry key="D1" value="1255.8763864090536" />
-      <entry key="W1" value="1468.6537867285476" />
+      <entry key="MS100" value="1.4944767724409901E-5" />
+      <entry key="MS500" value="0.10836728579373656" />
+      <entry key="S2" value="0.5941031752712317" />
+      <entry key="S5" value="1.153785862507812" />
+      <entry key="S10" value="2.0447515177931344" />
+      <entry key="S30" value="4.833521314131896" />
+      <entry key="S60" value="7.15800642514616" />
+      <entry key="M2" value="9.30955044339473" />
+      <entry key="M5" value="14.230155159750714" />
+      <entry key="M10" value="24.326045850707832" />
+      <entry key="M15" value="35.726128233121216" />
+      <entry key="M30" value="74.69782193997362" />
+      <entry key="H1" value="163.4421339277805" />
+      <entry key="H2" value="329.4526974380922" />
+      <entry key="H4" value="593.9706429266382" />
+      <entry key="D1" value="1298.5739341080684" />
+      <entry key="W1" value="1539.8787820925431" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -209,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794325732564</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Tentativo di risoluzione problema aggiornamento high score">
+      <option name="closed" value="true" />
+      <created>1794410288364</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1794410288364</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +235,7 @@
     <MESSAGE value="restituzione punteggio con check_result()" />
     <MESSAGE value="randomizzazione lista, disattivazione &quot;invio&quot; dopo avvio timer" />
     <MESSAGE value="creata funzione per salvataggio high score (da correggere aggiornamento high score)" />
-    <option name="LAST_COMMIT_MESSAGE" value="creata funzione per salvataggio high score (da correggere aggiornamento high score)" />
+    <MESSAGE value="Tentativo di risoluzione problema aggiornamento high score" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tentativo di risoluzione problema aggiornamento high score" />
   </component>
 </project>
